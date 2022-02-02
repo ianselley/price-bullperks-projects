@@ -1,0 +1,159 @@
+Creating network "bullperks_default" with the default driver
+Building api
+Sending build context to Docker daemon  23.04kB
+Step 1/8 : FROM python:3.10-alpine
+ ---> faacba077aaa
+Step 2/8 : RUN mkdir api
+ ---> Using cache
+ ---> 88ce75b72fda
+Step 3/8 : WORKDIR /api
+ ---> Using cache
+ ---> a8955c9a0f12
+Step 4/8 : COPY requirements.txt .
+ ---> Using cache
+ ---> ea9ab6517782
+Step 5/8 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> 0b453fb0d7a8
+Step 6/8 : COPY creds.json .
+ ---> Using cache
+ ---> f06dd3a96e8a
+Step 7/8 : COPY app .
+ ---> Using cache
+ ---> d3b5e308be13
+Step 8/8 : CMD [ "python", "main.py" ]
+ ---> Using cache
+ ---> 7842017d2e59
+Successfully built 7842017d2e59
+Successfully tagged bullperks_api:latest
+Building telegram
+Sending build context to Docker daemon  14.34kB
+Step 1/9 : FROM python:3.10-alpine
+ ---> faacba077aaa
+Step 2/9 : RUN mkdir telegram_bot
+ ---> Using cache
+ ---> 5ad9b725e859
+Step 3/9 : WORKDIR /telegram_bot
+ ---> Using cache
+ ---> d678a06a22a7
+Step 4/9 : COPY requirements.txt .
+ ---> Using cache
+ ---> 647c2c6de246
+Step 5/9 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> 89ea0dba3e5c
+Step 6/9 : COPY creds.json .
+ ---> Using cache
+ ---> 1e60db71ac6a
+Step 7/9 : COPY sheets.py .
+ ---> Using cache
+ ---> 8c387a13a555
+Step 8/9 : COPY main.py .
+ ---> Using cache
+ ---> 0449f59a61f1
+Step 9/9 : CMD [ "python", "main.py" ]
+ ---> Using cache
+ ---> 3ed1ac6b4099
+Successfully built 3ed1ac6b4099
+Successfully tagged bullperks_telegram:latest
+Creating bullperks_api_1 ... 
+Creating bullperks_api_1 ... done
+Creating bullperks_telegram_1 ... 
+Creating bullperks_telegram_1 ... done
+Attaching to bullperks_api_1, bullperks_telegram_1
+[36mapi_1       |[0m  * Serving Flask app 'main' (lazy loading)
+[36mapi_1       |[0m  * Environment: production
+[36mapi_1       |[0m    WARNING: This is a development server. Do not use it in a production deployment.
+[36mapi_1       |[0m    Use a production WSGI server instead.
+[36mapi_1       |[0m  * Debug mode: on
+[36mapi_1       |[0m  * Running on all addresses.
+[36mapi_1       |[0m    WARNING: This is a development server. Do not use it in a production deployment.
+[36mapi_1       |[0m  * Running on http://192.168.240.2:5000/ (Press CTRL+C to quit)
+[36mapi_1       |[0m  * Restarting with stat
+[36mapi_1       |[0m  * Debugger is active!
+[36mapi_1       |[0m  * Debugger PIN: 127-546-846
+[36mapi_1       |[0m 81.34.93.59 - - [02/Feb/2022 13:47:38] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -
+Stopping bullperks_telegram_1 ... 
+Stopping bullperks_api_1      ... 
+Killing bullperks_telegram_1  ... 
+Killing bullperks_api_1       ... 
+Killing bullperks_api_1       ... done
+Killing bullperks_telegram_1  ... done
+2
+Gracefully stopping... (press Ctrl+C again to force)
+Creating network "bullperks_default" with the default driver
+Building api
+Sending build context to Docker daemon  23.04kB
+Step 1/8 : FROM python:3.10-alpine
+ ---> faacba077aaa
+Step 2/8 : RUN mkdir api
+ ---> Using cache
+ ---> 88ce75b72fda
+Step 3/8 : WORKDIR /api
+ ---> Using cache
+ ---> a8955c9a0f12
+Step 4/8 : COPY requirements.txt .
+ ---> Using cache
+ ---> ea9ab6517782
+Step 5/8 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> 0b453fb0d7a8
+Step 6/8 : COPY creds.json .
+ ---> Using cache
+ ---> f06dd3a96e8a
+Step 7/8 : COPY app .
+ ---> Using cache
+ ---> d3b5e308be13
+Step 8/8 : CMD [ "python", "main.py" ]
+ ---> Using cache
+ ---> 7842017d2e59
+Successfully built 7842017d2e59
+Successfully tagged bullperks_api:latest
+Building telegram
+Sending build context to Docker daemon  14.34kB
+Step 1/9 : FROM python:3.10-alpine
+ ---> faacba077aaa
+Step 2/9 : RUN mkdir telegram_bot
+ ---> Using cache
+ ---> 5ad9b725e859
+Step 3/9 : WORKDIR /telegram_bot
+ ---> Using cache
+ ---> d678a06a22a7
+Step 4/9 : COPY requirements.txt .
+ ---> Using cache
+ ---> 647c2c6de246
+Step 5/9 : RUN pip install -r requirements.txt
+ ---> Using cache
+ ---> 89ea0dba3e5c
+Step 6/9 : COPY creds.json .
+ ---> Using cache
+ ---> 1e60db71ac6a
+Step 7/9 : COPY sheets.py .
+ ---> Using cache
+ ---> 8c387a13a555
+Step 8/9 : COPY main.py .
+ ---> Using cache
+ ---> 0449f59a61f1
+Step 9/9 : CMD [ "python", "main.py" ]
+ ---> Using cache
+ ---> 3ed1ac6b4099
+Successfully built 3ed1ac6b4099
+Successfully tagged bullperks_telegram:latest
+Creating bullperks_api_1 ... 
+Creating bullperks_api_1 ... done
+Creating bullperks_telegram_1 ... 
+Creating bullperks_telegram_1 ... done
+Attaching to bullperks_api_1, bullperks_telegram_1
+[36mapi_1       |[0m  * Serving Flask app 'main' (lazy loading)
+[36mapi_1       |[0m  * Environment: production
+[36mapi_1       |[0m    WARNING: This is a development server. Do not use it in a production deployment.
+[36mapi_1       |[0m    Use a production WSGI server instead.
+[36mapi_1       |[0m  * Debug mode: on
+[36mapi_1       |[0m  * Running on all addresses.
+[36mapi_1       |[0m    WARNING: This is a development server. Do not use it in a production deployment.
+[36mapi_1       |[0m  * Running on http://172.18.0.2:5000/ (Press CTRL+C to quit)
+[36mapi_1       |[0m  * Restarting with stat
+[36mapi_1       |[0m  * Debugger is active!
+[36mapi_1       |[0m  * Debugger PIN: 638-611-422
+[36mapi_1       |[0m 81.34.93.59 - - [02/Feb/2022 13:48:47] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -
+[36mapi_1       |[0m 35.187.132.215 - - [02/Feb/2022 13:49:07] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -

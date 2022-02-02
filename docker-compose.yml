@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+
+  api:
+    build: ./api
+    ports:
+      - "5050:5000"
+    volumes:
+      - data:/api/app/shared
+    env_file:
+      - .env
+
+  telegram:
+    build: ./telegram_bot
+    volumes:
+      - data:/telegram_bot/shared
+    depends_on:
+      - api
+    env_file:
+      - .env
+
+
+volumes:
+  
+    data:
