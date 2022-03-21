@@ -23,9 +23,9 @@ def try_to_update_prices():
 def send_prices(chat_id, dict_of_prices):
     if type(dict_of_prices) == dict:
         for slug, price in dict_of_prices.items():
-            answer = f"{slug}: {price} USD"
-            telegram_bot.send_message(chat_id, answer)
-            print(answer)
+            response = f"{slug}: {price} USD"
+            telegram_bot.send_message(chat_id, response)
+            print(response)
     else:
         telegram_bot.send_message(chat_id, dict_of_prices)
         print(dict_of_prices)

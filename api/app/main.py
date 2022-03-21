@@ -1,30 +1,27 @@
-from flask import Flask, request, jsonify
+from fastapi import FastAPI
 import os
+import traceback
 
-from shared.sheets import SheetBot
+from app.sheets import SheetBot
 
-
-app = Flask(__name__)
+app = FastAPI()
 
 sheet_bot = SheetBot()
 secret_key = os.getenv("SECRET_KEY")
 
 
-@app.route("/updatePrices", methods=["GET"])
-def update_prices():
-    token = request.args.get("CLIENT_TOKEN")
-    if token == secret_key:
+@app.get("/updatePrices")
+def update_prices(CLIENT_TOKEN: str = ""):
+    if CLIENT_TOKEN == secret_key:
         try:
-            dict_of_prices = sheet_bot.update_sheet()
+            response = sheet_bot.update_sheet()
             sheet_bot.logger.log("Prices updated")
         except Exception as e:
-            dict_of_prices = str(e)
-            sheet_bot.logger.log(str(e))
+            print(traceback.format_exc())
+            response = str(e)
+            sheet_bot.logger.log(response)
 
-        return jsonify({"response": dict_of_prices})
+        return {"response": response}
     else:
-        return jsonify({"message": "Not Found"})
+        return {"message": "Not Found"}
 
-
-if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)

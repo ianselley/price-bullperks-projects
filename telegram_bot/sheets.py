@@ -103,11 +103,17 @@ class CoinGecko(Exchange):
 
 
     def add_prices_to(self, slugs: dict[str]):
-        response_json = self.get_prices(",".join(slugs.keys()))
+        ids = self.join_slugs(slugs)
+        response_json = self.get_prices(ids)
         for slug, data in response_json.items():
-            slugs[slug]["price"] = f'{data["usd"]:,}'
-
+            if not data:
+                continue
+            slugs[slug]["price"] = f'{data.get("usd"):,}'
         return slugs
+
+
+    def join_slugs(self, slugs: dict[str]):
+        return ",".join(slugs.keys())
 
 
 class SheetBot:
@@ -120,7 +126,8 @@ class SheetBot:
 
     def parse_slug(self, project: str):
         try:
-            return project.strip().split(" ")[0]
+            slug = project.strip().split("(")[0].strip()
+            return slug.replace(" ", "-").lower()
         except Exception as e:
             self.logger.log(str(e))
 

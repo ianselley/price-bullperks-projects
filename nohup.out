@@ -157,3 +157,117 @@ Attaching to bullperks_api_1, bullperks_telegram_1
 [36mapi_1       |[0m  * Debugger PIN: 638-611-422
 [36mapi_1       |[0m 81.34.93.59 - - [02/Feb/2022 13:48:47] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -
 [36mapi_1       |[0m 35.187.132.215 - - [02/Feb/2022 13:49:07] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -
+[36mapi_1       |[0m 81.34.93.59 - - [02/Feb/2022 14:09:25] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -
+[36mapi_1       |[0m 81.34.93.59 - - [02/Feb/2022 14:09:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[36mapi_1       |[0m 35.187.139.159 - - [02/Feb/2022 14:09:43] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -
+[36mapi_1       |[0m 34.116.22.43 - - [02/Feb/2022 22:53:00] "GET /updatePrices?CLIENT_TOKEN=ianSelleyBullPerksBotPrices2022 HTTP/1.1" 200 -
+[33mtelegram_1  |[0m Traceback (most recent call last):
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+[33mtelegram_1  |[0m 
+[33mtelegram_1  |[0m [2022-02-02 22:57:07] => Precios actualizados
+[33mtelegram_1  |[0m 
+[33mtelegram_1  |[0m defihorse: None USD
+[33mtelegram_1  |[0m xmanna: None USD
+[33mtelegram_1  |[0m metagear: 0.460032 USD
+[33mtelegram_1  |[0m devvio: None USD
+[33mtelegram_1  |[0m bitcoin: 37,218 USD
+[33mtelegram_1  |[0m ethereum: 2,695.9 USD
+[33mtelegram_1  |[0m     six.raise_from(e, None)
+[33mtelegram_1  |[0m   File "<string>", line 3, in raise_from
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+[33mtelegram_1  |[0m     httplib_response = conn.getresponse()
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/http/client.py", line 1374, in getresponse
+[33mtelegram_1  |[0m     response.begin()
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/http/client.py", line 318, in begin
+[33mtelegram_1  |[0m     version, status, reason = self._read_status()
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/http/client.py", line 279, in _read_status
+[33mtelegram_1  |[0m     line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/socket.py", line 705, in readinto
+[33mtelegram_1  |[0m     return self._sock.recv_into(b)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/ssl.py", line 1273, in recv_into
+[33mtelegram_1  |[0m     return self.read(nbytes, buffer)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/ssl.py", line 1129, in read
+[33mtelegram_1  |[0m     return self._sslobj.read(len, buffer)
+[33mtelegram_1  |[0m TimeoutError: The read operation timed out
+[33mtelegram_1  |[0m 
+[33mtelegram_1  |[0m During handling of the above exception, another exception occurred:
+[33mtelegram_1  |[0m 
+[33mtelegram_1  |[0m Traceback (most recent call last):
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 440, in send
+[33mtelegram_1  |[0m     resp = conn.urlopen(
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+[33mtelegram_1  |[0m     retries = retries.increment(
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/util/retry.py", line 550, in increment
+[33mtelegram_1  |[0m     raise six.reraise(type(error), error, _stacktrace)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/packages/six.py", line 770, in reraise
+[33mtelegram_1  |[0m     raise value
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+[33mtelegram_1  |[0m     httplib_response = self._make_request(
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 451, in _make_request
+[33mtelegram_1  |[0m     self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 340, in _raise_timeout
+[33mtelegram_1  |[0m     raise ReadTimeoutError(
+[33mtelegram_1  |[0m urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+[33mtelegram_1  |[0m 
+[33mtelegram_1  |[0m During handling of the above exception, another exception occurred:
+[33mtelegram_1  |[0m 
+[33mtelegram_1  |[0m Traceback (most recent call last):
+[33mtelegram_1  |[0m   File "/telegram_bot/main.py", line 49, in <module>
+[33mtelegram_1  |[0m     telegram_bot.polling()
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/__init__.py", line 658, in polling
+[33mtelegram_1  |[0m     self.__threaded_polling(non_stop, interval, timeout, long_polling_timeout, allowed_updates)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/__init__.py", line 720, in __threaded_polling
+[33mtelegram_1  |[0m     raise e
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/__init__.py", line 679, in __threaded_polling
+[33mtelegram_1  |[0m     polling_thread.raise_exceptions()
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/util.py", line 105, in raise_exceptions
+[33mtelegram_1  |[0m     raise self.exception_info
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/util.py", line 87, in run
+[33mtelegram_1  |[0m     task(*args, **kwargs)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/__init__.py", line 407, in __retrieve_updates
+[33mtelegram_1  |[0m     updates = self.get_updates(offset=(self.last_update_id + 1), 
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/__init__.py", line 387, in get_updates
+[33mtelegram_1  |[0m     json_updates = apihelper.get_updates(self.token, offset, limit, timeout, allowed_updates, long_polling_timeout)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/apihelper.py", line 328, in get_updates
+[33mtelegram_1  |[0m     return _make_request(token, method_url, params=payload)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/telebot/apihelper.py", line 152, in _make_request
+[33mtelegram_1  |[0m     result = _get_req_session().request(
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 529, in request
+[33mtelegram_1  |[0m     resp = self.send(prep, **send_kwargs)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/requests/sessions.py", line 645, in send
+[33mtelegram_1  |[0m     r = adapter.send(request, **kwargs)
+[33mtelegram_1  |[0m   File "/usr/local/lib/python3.10/site-packages/requests/adapters.py", line 532, in send
+[33mtelegram_1  |[0m     raise ReadTimeout(e, request=request)
+[33mtelegram_1  |[0m requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=25)
+[33mbullperks_telegram_1 exited with code 1
+[0m[36mapi_1       |[0m 172.105.252.42 - - [04/Feb/2022 13:13:40] code 400, message Bad request syntax ('#ST')
+[36mapi_1       |[0m 172.105.252.42 - - [04/Feb/2022 13:13:40] "[35m[1m#ST[0m" HTTPStatus.BAD_REQUEST -
+[36mapi_1       |[0m 172.105.252.42 - - [04/Feb/2022 13:13:42] code 400, message Bad HTTP/0.9 request type ('\x00')
+[36mapi_1       |[0m 172.105.252.42 - - [04/Feb/2022 13:13:42] "[35m[1m n    beio[0m" HTTPStatus.BAD_REQUEST -
+[36mapi_1       |[0m 172.105.252.42 - - [04/Feb/2022 13:13:44] code 400, message Bad request syntax ('\x00\x00\x07\x00\x08\x00\x03\x00\x04\x00\x05\x00\x06')
+[36mapi_1       |[0m 172.105.252.42 - - [04/Feb/2022 13:13:44] "[35m[1m       [0m" HTTPStatus.BAD_REQUEST -
+[36mapi_1       |[0m 172.105.252.42 - - [04/Feb/2022 13:13:44] "[33mGET / HTTP/1.0[0m" 404 -
+[36mapi_1       |[0m 45.146.164.132 - - [04/Feb/2022 14:44:21] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[36mapi_1       |[0m 45.146.164.132 - - [04/Feb/2022 14:44:21] "[35m[1m  /*à     Cookie: mstshash=Administr[0m" HTTPStatus.BAD_REQUEST -
+[32mtelegram_1  |[0m Traceback (most recent call last):
+[32mtelegram_1  |[0m   File "/telegram_bot/main.py", line 9, in <module>
+[32mtelegram_1  |[0m     BOT_TOKEN = json.loads("secrets.json")["TELEGRAM_BULLPERKS_TOKEN"]
+[32mtelegram_1  |[0m   File "/usr/local/lib/python3.10/json/__init__.py", line 346, in loads
+[32mtelegram_1  |[0m     return _default_decoder.decode(s)
+[32mtelegram_1  |[0m   File "/usr/local/lib/python3.10/json/decoder.py", line 337, in decode
+[32mtelegram_1  |[0m     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+[32mtelegram_1  |[0m   File "/usr/local/lib/python3.10/json/decoder.py", line 355, in raw_decode
+[32mtelegram_1  |[0m     raise JSONDecodeError("Expecting value", s, err.value) from None
+[32mtelegram_1  |[0m json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[32mbullperks_telegram_1 exited with code 1
+[0m[36mapi_1       |[0m 106.75.223.50 - - [05/Feb/2022 14:38:53] code 400, message Bad request syntax ('YMSG\x00\x10\x00\x00\x00\x12\x00W\x00\x00\x00\x00\x00\x00\x00\x001À\x80smithjohn1717À\x80')
+[36mapi_1       |[0m 106.75.223.50 - - [05/Feb/2022 14:38:53] "[35m[1mYMSG     W        1Àsmithjohn1717À[0m" HTTPStatus.BAD_REQUEST -
+[36mapi_1       |[0m 106.75.223.50 - - [05/Feb/2022 14:38:53] code 400, message Bad request version ('À\x14À')
+[36mapi_1       |[0m 106.75.223.50 - - [05/Feb/2022 14:38:53] "[35m[1m î  êå'RÃv0fÁ°µèYûïØ¼¯¤nM½37 ¿³¬%YUBP+FN6(úÖW=D«&Ïü¨ &À/À0À+À,Ì¨Ì©ÀÀ	ÀÀ[0m" HTTPStatus.BAD_REQUEST -
+[36mapi_1       |[0m 106.75.223.50 - - [05/Feb/2022 14:38:54] "[33mGET / HTTP/1.0[0m" 404 -
+[36mapi_1       |[0m 113.31.102.176 - - [05/Feb/2022 14:39:54] "[33mGET / HTTP/1.1[0m" 404 -
+[36mapi_1       |[0m 198.211.101.164 - - [06/Feb/2022 17:38:56] "[33mGET / HTTP/1.0[0m" 404 -
+[36mapi_1       |[0m 183.136.226.4 - - [06/Feb/2022 19:38:06] code 400, message Bad request syntax ('YMSG\x00\x10\x00\x00\x00\x12\x00W\x00\x00\x00\x00\x00\x00\x00\x001À\x80smithjohn1717À\x80')
+[36mapi_1       |[0m 183.136.226.4 - - [06/Feb/2022 19:38:06] "[35m[1mYMSG     W        1Àsmithjohn1717À[0m" HTTPStatus.BAD_REQUEST -
+[36mbullperks_api_1 exited with code 0
+[0m

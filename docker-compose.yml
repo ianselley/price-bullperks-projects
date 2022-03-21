@@ -5,22 +5,17 @@ services:
   api:
     build: ./api
     ports:
-      - "5050:5000"
+      - "5050:5050"
     volumes:
-      - data:/api/app/shared
+      - ./api:/app
+    restart: always
     env_file:
       - .env
+    command: /start-reload.sh 
 
   telegram:
     build: ./telegram_bot
-    volumes:
-      - data:/telegram_bot/shared
     depends_on:
       - api
     env_file:
       - .env
-
-
-volumes:
-  
-    data:

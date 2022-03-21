@@ -1,13 +1,11 @@
-FROM python:3.10-alpine
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.9-slim
 
-RUN mkdir api
-WORKDIR /api
+RUN mkdir app
+WORKDIR /app
 
+RUN pip install --upgrade pip
 COPY requirements.txt .
-
 RUN pip install -r requirements.txt
 
 COPY creds.json .
 COPY app .
-
-CMD [ "python", "main.py" ]
