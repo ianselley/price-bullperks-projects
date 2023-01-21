@@ -4,4 +4,4 @@ venv
 creds.json
 secrets.json
 __pycache__
-nohup.txt
+nohup.out
